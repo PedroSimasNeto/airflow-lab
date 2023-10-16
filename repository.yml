@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: my-private-ssh-repo
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  url: git@github.com:PedroSimasNeto/airflow-lab.git
+  sshPrivateKey: |
+    -----BEGIN OPENSSH PRIVATE KEY-----
+    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
+    -----END OPENSSH PRIVATE KEY-----
+  insecure: "true" # Do not perform a host key check for the server. Defaults to "false"
+  enableLfs: "true" # Enable git-lfs for this repository. Defaults to "false"
