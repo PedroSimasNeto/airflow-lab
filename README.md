@@ -24,3 +24,15 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```shell
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d
 ```
+
+# Configuração do Airflow no ArgoCD
+
+## Adicionando o repositório do GitHub
+```shell
+kubectl apply -f repository.yaml
+```
+
+## Deploy do Airflow no ArgoCD
+```shell
+kubectl apply -f airflow.yaml
+```
